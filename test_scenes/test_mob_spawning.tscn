@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7c1klxb2o3hh"]
+
+[ext_resource type="PackedScene" uid="uid://q373rfyjtw3m" path="res://player/player.tscn" id="1_fs4s3"]
+[ext_resource type="PackedScene" uid="uid://coemnnidhclno" path="res://systems/mob_spawner.tscn" id="2_ineq1"]
+[ext_resource type="PackedScene" uid="uid://s6x0ocdyyxox" path="res://ui/game_ui.tscn" id="3_sqng3"]
+[ext_resource type="PackedScene" uid="uid://cqqf63as4vedm" path="res://misc/Tree.tscn" id="4_8r6tt"]
+
+[node name="TestMobSpawning" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_fs4s3")]
+position = Vector2(556, 301)
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_ineq1")]
+
+[node name="GameUI" parent="." instance=ExtResource("3_sqng3")]
+
+[node name="AnimatedTree" parent="." instance=ExtResource("4_8r6tt")]
+position = Vector2(204, 216)

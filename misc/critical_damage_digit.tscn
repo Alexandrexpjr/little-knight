@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b726m00aw8vu5"]
+
+[ext_resource type="PackedScene" uid="uid://cdmtiav0v2ur" path="res://misc/damage_digit.tscn" id="1_1k8nh"]
+
+[sub_resource type="SystemFont" id="SystemFont_7lly8"]
+font_names = PackedStringArray("Bahnschrift")
+font_weight = 999
+
+[sub_resource type="LabelSettings" id="LabelSettings_fawrr"]
+font = SubResource("SystemFont_7lly8")
+font_size = 32
+font_color = Color(1, 0.678431, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[node name="DamageDigit" instance=ExtResource("1_1k8nh")]
+
+[node name="Label" parent="Node2D" index="0"]
+label_settings = SubResource("LabelSettings_fawrr")

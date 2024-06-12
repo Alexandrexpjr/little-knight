@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqqf63as4vedm"]
+
+[ext_resource type="PackedScene" uid="uid://dets1khlw58k0" path="res://misc/animated_tree.tscn" id="1_bcbgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqgr6"]
+radius = 14.0357
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="AnimatedTree" parent="." instance=ExtResource("1_bcbgy")]
+position = Vector2(0, -73)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_xqgr6")

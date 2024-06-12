@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ut1uc05uur47"]
+
+[ext_resource type="PackedScene" uid="uid://0m1iyh336lvm" path="res://misc/meat.tscn" id="1_dus6i"]
+[ext_resource type="Script" path="res://misc/life_increaser.gd" id="2_ri0yx"]
+
+[node name="Meat" instance=ExtResource("1_dus6i")]
+modulate = Color(2.5, 2, 1, 1)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("2_ri0yx")
+health_amout = 10
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+debug_color = Color(0, 0.545098, 0.635294, 0.0784314)
+
+[node name="TextDigitMarker" type="Marker2D" parent="." index="2"]
+position = Vector2(0, -45.3333)

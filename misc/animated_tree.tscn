@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://dets1khlw58k0"]
+
+[ext_resource type="Texture2D" uid="uid://cpcw8qaxk7k5x" path="res://addons/Tiny Swords/Resources/Trees/Tree.png" id="1_c6w81"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejrya"]
+atlas = ExtResource("1_c6w81")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rukpp"]
+atlas = ExtResource("1_c6w81")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7qme"]
+atlas = ExtResource("1_c6w81")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5o4k"]
+atlas = ExtResource("1_c6w81")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0o13"]
+atlas = ExtResource("1_c6w81")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yco51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rukpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7qme")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5o4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0o13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejrya")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedTree" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_yco51")
+autoplay = "default"
+frame_progress = 0.516236

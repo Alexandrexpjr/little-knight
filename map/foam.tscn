@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdc5voaiopfsp"]
+
+[ext_resource type="Texture2D" uid="uid://bk8178kn8l1ni" path="res://addons/Tiny Swords/Terrain/Water/Foam/Foam.png" id="1_0kjbi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3650"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n22ww"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ra11"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyn7o"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5vn5"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1icr"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xq1e7"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vtel"]
+atlas = ExtResource("1_0kjbi")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_whpks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3650")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n22ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ra11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyn7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5vn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1icr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xq1e7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vtel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Foam" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -2
+z_as_relative = false
+sprite_frames = SubResource("SpriteFrames_whpks")
+autoplay = "default"
+frame_progress = 0.207438

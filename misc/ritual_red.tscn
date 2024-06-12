@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://wh46lthi28al"]
+
+[ext_resource type="PackedScene" uid="uid://b5ky73tlipuq5" path="res://misc/ritual.tscn" id="1_io4ti"]
+
+[node name="Ritual" instance=ExtResource("1_io4ti")]
+
+[node name="Images" parent="." index="1"]
+modulate = Color(0.243137, 0, 0, 1)

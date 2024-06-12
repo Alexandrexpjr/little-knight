@@ -1,0 +1,127 @@
+[gd_scene load_steps=13 format=3 uid="uid://bcip4g4l4a54d"]
+
+[ext_resource type="PackedScene" uid="uid://q373rfyjtw3m" path="res://player/player.tscn" id="1_ervwl"]
+[ext_resource type="Script" path="res://camera.gd" id="1_ghrsg"]
+[ext_resource type="Script" path="res://main.gd" id="1_ytch1"]
+[ext_resource type="PackedScene" uid="uid://coemnnidhclno" path="res://systems/mob_spawner.tscn" id="2_0tecb"]
+[ext_resource type="PackedScene" uid="uid://bh1jr7e6ck4s5" path="res://ui/game_over_ui.tscn" id="2_6jn36"]
+[ext_resource type="PackedScene" uid="uid://s6x0ocdyyxox" path="res://ui/game_ui.tscn" id="3_crkoc"]
+[ext_resource type="PackedScene" uid="uid://du3wvu6ciyrp8" path="res://tile_map.tscn" id="4_cv1gf"]
+[ext_resource type="PackedScene" uid="uid://cqqf63as4vedm" path="res://misc/Tree.tscn" id="6_mp8cy"]
+[ext_resource type="Script" path="res://systems/difficulty_system.gd" id="7_p8dur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5n0nl"]
+size = Vector2(809.737, 144.513)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5lmf"]
+size = Vector2(167.261, 489.391)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kj6al"]
+size = Vector2(168.23, 489.391)
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("game_ui")]
+y_sort_enabled = true
+script = ExtResource("1_ytch1")
+game_ui = NodePath("GameUI")
+game_over_ui_template = ExtResource("2_6jn36")
+
+[node name="TileMap" parent="." instance=ExtResource("4_cv1gf")]
+layer_0/z_index = -1
+
+[node name="WorldLimit" type="StaticBody2D" parent="."]
+collision_layer = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldLimit"]
+position = Vector2(-69.8752, -3327.54)
+scale = Vector2(16.5012, 11.5082)
+shape = SubResource("RectangleShape2D_5n0nl")
+debug_color = Color(0.8, 0, 0.207843, 0.419608)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WorldLimit"]
+position = Vector2(183.187, 3968)
+scale = Vector2(16.5012, 11.5082)
+shape = SubResource("RectangleShape2D_5n0nl")
+debug_color = Color(0.8, 0, 0.207843, 0.419608)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="WorldLimit"]
+position = Vector2(5348, 328)
+scale = Vector2(16.5012, 11.5082)
+shape = SubResource("RectangleShape2D_r5lmf")
+debug_color = Color(0.8, 0, 0.207843, 0.419608)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="WorldLimit"]
+position = Vector2(-4780, 320)
+scale = Vector2(16.5012, 11.5082)
+shape = SubResource("RectangleShape2D_kj6al")
+debug_color = Color(0.8, 0, 0.207843, 0.419608)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(591, 344)
+script = ExtResource("1_ghrsg")
+
+[node name="Player" parent="." instance=ExtResource("1_ervwl")]
+position = Vector2(576, 384)
+health = 1
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_0tecb")]
+position = Vector2(586, 320)
+
+[node name="GameUI" parent="." instance=ExtResource("3_crkoc")]
+
+[node name="Trees" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Tree" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(2919, -1832)
+
+[node name="Tree12" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(2908, -836)
+
+[node name="Tree13" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(3089, 691)
+
+[node name="Tree14" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(2976, 2558)
+
+[node name="Tree15" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-746, 1540)
+
+[node name="Tree16" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-2364, 2389)
+
+[node name="Tree17" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(284, 360)
+
+[node name="Tree2" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(1901, 792)
+
+[node name="Tree3" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(1889, 1856)
+
+[node name="Tree4" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-1109, -2047)
+
+[node name="Tree5" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-577, -984)
+
+[node name="Tree6" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-2263, -475)
+
+[node name="Tree7" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-2478, -1787)
+
+[node name="Tree8" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(464, -1991)
+
+[node name="Tree9" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(1889, -973)
+
+[node name="Tree10" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-2138, 1573)
+
+[node name="Tree11" parent="Trees" instance=ExtResource("6_mp8cy")]
+position = Vector2(-690, -23)
+
+[node name="DifficultySystem" type="Node2D" parent="." node_paths=PackedStringArray("mob_spawner")]
+script = ExtResource("7_p8dur")
+mob_spawner = NodePath("../MobSpawner")

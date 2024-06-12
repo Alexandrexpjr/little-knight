@@ -1,0 +1,198 @@
+[gd_scene load_steps=15 format=3 uid="uid://s6x0ocdyyxox"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_74vyy"]
+[ext_resource type="Texture2D" uid="uid://dl8w3t6g7llg" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_imxaj"]
+[ext_resource type="Texture2D" uid="uid://i62rvhjv2ig5" path="res://addons/Tiny Swords/Resources/Resources/M_Idle.png" id="3_e0jrj"]
+[ext_resource type="Texture2D" uid="uid://ckreobcmav23x" path="res://addons/Tiny Swords/Resources/Resources/G_Idle.png" id="4_un3xo"]
+
+[sub_resource type="SystemFont" id="SystemFont_4iflg"]
+font_names = PackedStringArray("Bahnschrift")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ruav8"]
+font = SubResource("SystemFont_4iflg")
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xcu6i"]
+texture = ExtResource("1_imxaj")
+texture_margin_left = 32.0
+texture_margin_top = 24.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0503
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 120)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nsca6"]
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn1uo"]
+atlas = ExtResource("3_e0jrj")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83q0q"]
+atlas = ExtResource("4_un3xo")
+region = Rect2(32, 40, 64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ykg5"]
+bg_color = Color(0, 0, 0, 0.415686)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n4h6r"]
+bg_color = Color(0.729412, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+
+[sub_resource type="SystemFont" id="SystemFont_pruml"]
+font_names = PackedStringArray("Courier New")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_6565d"]
+font = SubResource("SystemFont_pruml")
+font_size = 24
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_74vyy")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.0
+offset_top = 23.0
+offset_right = 30.0
+offset_bottom = 46.0
+grow_horizontal = 2
+text = "08:50"
+label_settings = SubResource("LabelSettings_ruav8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -332.0
+offset_top = 12.0
+offset_right = -50.0
+offset_bottom = 89.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xcu6i")
+
+[node name="GoldLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 57.0
+offset_top = -31.5
+offset_right = 108.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0
+"
+label_settings = SubResource("LabelSettings_nsca6")
+
+[node name="MeatLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -31.5
+offset_right = 8.5
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0
+"
+label_settings = SubResource("LabelSettings_nsca6")
+
+[node name="TextureRect" type="TextureRect" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.5
+offset_top = -35.0
+offset_right = -39.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_yn1uo")
+
+[node name="TextureRect2" type="TextureRect" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -40.5
+offset_right = 66.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_83q0q")
+
+[node name="HealthProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = -93.0
+offset_right = 408.0
+offset_bottom = -57.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_3ykg5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n4h6r")
+step = 1.0
+value = 50.0
+rounded = true
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="HealthProgressBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -14.0
+offset_right = 49.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "100/100"
+label_settings = SubResource("LabelSettings_6565d")
